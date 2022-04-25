@@ -1,5 +1,5 @@
 // ここにスケッチ名を指定することができる。
-let sketchName = '黄色チェック';
+let sketchName = '柄';
 
 // ロードが完了した時に実行する関数。ここで初期化の処理を書く。
 // P5.jsやProcessingのsetupと同じ役割。
@@ -8,8 +8,8 @@ window.onload = function() {
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor:'#000000', // 線の色
-        fillColor:'#f0d000' , // 塗りの色
+        strokeColor:'#c5fcd5', // 線の色
+        fillColor:'#c5fcd5' , // 塗りの色
         strokeWidth: 1 // 線の幅
     };
 
@@ -64,9 +64,9 @@ window.onload = function() {
 
 
      project.currentStyle = {
-        strokeColor:'#000000', // 線の色
-        fillColor:'#000000' , // 塗りの色
-        strokeWidth: 5 // 線の幅
+        strokeColor:'#c7ffd7', // 線の色
+        fillColor:'#c7ffd7' , // 塗りの色
+        strokeWidth:8// 線の幅
     };
 
      Path.Line([0,50],[500,50]);
