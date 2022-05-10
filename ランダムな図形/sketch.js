@@ -21,12 +21,13 @@ function drawCloud(x,y){
 
 
 
+
 window.addEventListener('load', function(){
     // キャンバスの大きさを指定する。
     view.viewSize = new Size(500, 500);
 
     let bg = Path.Rectangle([0,0],view.viewSize);
-    
+
     let x = view.viewSize.width * 0.25;
     let y = view.viewSize.height * 0.3;
     let rectSize = [200, 300];
