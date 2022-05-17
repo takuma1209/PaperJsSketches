@@ -8,7 +8,7 @@ window.addEventListener('load', function(){
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor: '#5de6f5', // 線の色
+        strokeColor: '#000000', // 線の色
         fillColor: null, // 塗りの色
         strokeWidth: 1 // 線の幅
     };
@@ -16,14 +16,14 @@ window.addEventListener('load', function(){
     let x = view.viewSize.width * 0.5;
     let y = view.viewSize.height * 0.5;
 
-    let count =100;
+    let count =300;
     let length = 25;
     let angle = 200; 
     let theta = 40;
 
     for (let i = 0; i < count; i++) {
-        let p = Path.Circle([x + length, y], 50);
-        p.rotate(theta, [x, y]);
+        let p = Path.Circle([x + length, y], 500);
+        p.rotate(theta, [x+100, y+300]);
         theta += angle;
         length += 1;
     }
