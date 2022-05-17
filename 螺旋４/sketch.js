@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
     project.currentStyle = {
         strokeColor: '#FFFFFF', // 線の色
         fillColor: '#000000', // 塗りの色
-        strokeWidth: 0.5 // 線の幅
+        strokeWidth: 1 // 線の幅
     };
 
     let x = view.viewSize.width * 0.5;

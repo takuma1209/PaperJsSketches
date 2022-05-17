@@ -8,9 +8,9 @@ window.addEventListener('load', function(){
     view.viewSize = new Size(500, 500);
 
     project.currentStyle = {
-        strokeColor: '#FF006F', // 線の色
+        strokeColor: '#FFFFFF', // 線の色
         fillColor: '#000000', // 塗りの色
-        strokeWidth: 3 // 線の幅
+        strokeWidth: 2 // 線の幅
     };
 
     let x = view.viewSize.width * 0.5;
