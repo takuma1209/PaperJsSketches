@@ -1,5 +1,5 @@
 // ここにスケッチ名を指定することができる。
-let sketchName = '綺麗な絵';
+let sketchName = '迷彩';
 
 function pickRandom(array) {
     let i = Math.floor(Math.random() * array.length);
@@ -11,12 +11,11 @@ let randomRangeY = 20;
 
 function drawCloud(x, y) {
     for (let i = 0; i < 20; i++) {
-        let rand_x = Math.random() * randomRangeX - randomRangeX * 0.5;
-        let rand_y = Math.random() * randomRangeY - randomRangeY * 0.5;
-        let sizeX = Math.random() * 5 + 20; 
-        let sizeY = Math.random() * 5 + 20;
+        let rand_x = Math.random() * randomRangeX - randomRangeX * 1;
+        let rand_y = Math.random() * randomRangeY - randomRangeY * 1;
+        let sizeX = Math.random() * 10 + 100; 
+        let sizeY = Math.random() * 30 + 20;
         let oval = Path.Oval([x + rand_x, y + rand_y], [sizeX, sizeY]);
-        oval.opacity = 0.5;
     }
 }
 
@@ -27,11 +26,11 @@ window.addEventListener('load', function() {
     view.viewSize = new Size(500, 500);
 
     let bg = Path.Rectangle([0, 0], view.viewSize);
-    bg.fillColor = '#788219';
+    bg.fillColor = null;
 
+    let colors = ["#baa674","#737c42","#796243","#42462b"];
 
-
-    let randomRange = 5;
+    let randomRange = 100;
 
     let cloudColor = '#446e26';
 
@@ -43,7 +42,10 @@ window.addEventListener('load', function() {
     for (let i = 0; i < 100; i++) {
         let x = Math.random() * view.viewSize.width;
         let y = Math.random() * view.viewSize.height;
-
+        project.currentStyle = {
+            storokeColor:null,
+            fillColor:pickRandom(colors) 
+        };
         drawCloud(x, y);
     }
 
